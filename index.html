@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Currículum de Carlota Cordón Pérez, estudiante de Trabajo Social.">
+	<meta name="theme-color" content="#fff7fa">
+	<title>Carlota Cordón Pérez | Currículum</title>
+	<style>
+		:root {
+			/* Fondo rosa muy claro de la página. */
+			--color-fondo: #fff7fa;
+			/* Blanco para las tarjetas y superficies principales. */
+			--color-superficie: #ffffff;
+			/* Rosa pastel para el encabezado y los detalles suaves. */
+			--color-rosa-claro: #fce4ec;
+			/* Rosa medio para acentos, etiquetas y elementos decorativos. */
+			--color-rosa: #d97798;
+			/* Rosa oscuro para títulos y enlaces con buen contraste. */
+			--color-rosa-oscuro: #8f3d5a;
+			/* Color del texto principal. */
+			--color-texto: #352a30;
+			/* Color del texto secundario. */
+			--color-secundario: #75666d;
+			/* Color sutil para bordes y separadores. */
+			--color-borde: #f0dce4;
+			/* Sombra ligera para separar las tarjetas del fondo. */
+			--sombra-tarjeta: 0 12px 32px rgb(103 53 73 / 8%);
+		}
+
+		* { box-sizing: border-box; }
+
+		html { scroll-behavior: smooth; }
+
+		body {
+			margin: 0;
+			background: var(--color-fondo);
+			color: var(--color-texto);
+			font: 16px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif;
+		}
+
+		a { color: var(--color-rosa-oscuro); }
+
+		a:focus-visible {
+			outline: 3px solid var(--color-rosa);
+			outline-offset: 4px;
+			border-radius: 3px;
+		}
+
+		.contenedor {
+			width: min(100% - 40px, 1040px);
+			margin: 0 auto;
+		}
+
+		.cabecera {
+			padding: 52px 0 0;
+			background: linear-gradient(135deg, var(--color-rosa-claro), #fff1f6 62%, var(--color-fondo));
+			border-bottom: 1px solid var(--color-borde);
+		}
+
+		.presentacion {
+			display: grid;
+			grid-template-columns: minmax(0, 1fr) auto;
+			gap: 30px;
+			align-items: center;
+			padding: 18px 0 38px;
+		}
+
+		.etiqueta {
+			margin: 0 0 9px;
+			color: var(--color-rosa-oscuro);
+			font-size: .79rem;
+			font-weight: 750;
+			letter-spacing: .14em;
+			text-transform: uppercase;
+		}
+
+		h1, h2, h3, p { margin-top: 0; }
+
+		h1 {
+			max-width: 720px;
+			margin-bottom: 10px;
+			color: var(--color-rosa-oscuro);
+			font-size: clamp(2.2rem, 6vw, 4rem);
+			letter-spacing: -.045em;
+			line-height: 1.08;
+		}
+
+		.titular {
+			margin: 0;
+			color: var(--color-secundario);
+			font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+		}
+
+		.iniciales {
+			display: grid;
+			width: 112px;
+			aspect-ratio: 1;
+			place-items: center;
+			border: 1px solid rgb(143 61 90 / 15%);
+			border-radius: 32px;
+			background: rgb(255 255 255 / 75%);
+			color: var(--color-rosa-oscuro);
+			font-size: 2rem;
+			font-weight: 750;
+			letter-spacing: .04em;
+			box-shadow: var(--sombra-tarjeta);
+		}
+
+		nav {
+			border-top: 1px solid rgb(143 61 90 / 12%);
+		}
+
+		nav ul {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 4px 24px;
+			margin: 0;
+			padding: 13px 0;
+			list-style: none;
+		}
+
+		nav a {
+			display: inline-block;
+			padding: 5px 0;
+			color: var(--color-texto);
+			font-size: .9rem;
+			font-weight: 650;
+			text-decoration: none;
+		}
+
+		nav a:hover { color: var(--color-rosa-oscuro); }
+
+		main { padding: 34px 0 52px; }
+
+		.secciones {
+			display: grid;
+			gap: 20px;
+		}
+
+		.tarjeta {
+			padding: 27px 30px;
+			border: 1px solid var(--color-borde);
+			border-radius: 18px;
+			background: var(--color-superficie);
+			box-shadow: var(--sombra-tarjeta);
+			scroll-margin-top: 20px;
+		}
+
+		.tarjeta h2 {
+			display: flex;
+			align-items: center;
+			gap: 12px;
+			margin-bottom: 17px;
+			color: var(--color-rosa-oscuro);
+			font-size: 1.16rem;
+			letter-spacing: .025em;
+		}
+
+		.tarjeta h2::before {
+			width: 4px;
+			height: 23px;
+			border-radius: 4px;
+			background: var(--color-rosa);
+			content: "";
+		}
+
+		.tarjeta p:last-child,
+		.tarjeta ul:last-child { margin-bottom: 0; }
+
+		.datos-contacto {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px 24px;
+			margin: 23px 0 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.datos-contacto li {
+			color: var(--color-secundario);
+			font-size: .94rem;
+		}
+
+		.datos-contacto a {
+			font-weight: 650;
+			text-decoration-thickness: 1px;
+			text-underline-offset: 3px;
+		}
+
+		.item {
+			padding: 0 0 18px 18px;
+			border-left: 2px solid var(--color-rosa-claro);
+		}
+
+		.item:last-child { padding-bottom: 0; }
+
+		.item h3 {
+			margin-bottom: 3px;
+			font-size: 1.02rem;
+		}
+
+		.detalle {
+			margin-bottom: 8px;
+			color: var(--color-rosa-oscuro);
+			font-size: .93rem;
+			font-weight: 650;
+		}
+
+		.item p:last-child { margin-bottom: 0; }
+
+		.lista {
+			display: grid;
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+			gap: 10px 26px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.lista li {
+			position: relative;
+			padding-left: 19px;
+		}
+
+		.lista li::before {
+			position: absolute;
+			top: .72em;
+			left: 1px;
+			width: 7px;
+			height: 7px;
+			border-radius: 50%;
+			background: var(--color-rosa);
+			content: "";
+		}
+
+		.nota { margin-bottom: 0; color: var(--color-secundario); }
+
+		.pie {
+			padding: 0 0 28px;
+			color: var(--color-secundario);
+			font-size: .85rem;
+			text-align: center;
+		}
+
+		@media (max-width: 640px) {
+			.contenedor { width: min(100% - 28px, 1040px); }
+			.cabecera { padding-top: 28px; }
+			.presentacion { grid-template-columns: 1fr; gap: 18px; padding: 12px 0 26px; }
+			.iniciales { grid-row: 1; width: 76px; border-radius: 23px; font-size: 1.5rem; }
+			h1 { font-size: clamp(2rem, 10vw, 3rem); }
+			nav ul { gap: 2px 18px; }
+			nav a { font-size: .85rem; }
+			main { padding: 21px 0 34px; }
+			.secciones { gap: 14px; }
+			.tarjeta { padding: 22px 20px; border-radius: 15px; }
+			.lista { grid-template-columns: 1fr; gap: 8px; }
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			html { scroll-behavior: auto; }
+		}
+	</style>
+</head>
+<body>
+	<header class="cabecera">
+		<div class="contenedor">
+			<!-- ===== SECCIÓN: PRESENTACIÓN ===== -->
+			<section class="presentacion" id="presentacion" aria-labelledby="nombre">
+				<div>
+					<p class="etiqueta">Currículum</p>
+					<h1 id="nombre">Carlota Cordón Pérez</h1>
+					<p class="titular">Estudiante de cuarto curso del Grado en Trabajo Social</p>
+					<ul class="datos-contacto">
+						<li>Chipiona, Cádiz</li>
+						<li><a href="mailto:CARLOTACORDON4@GMAIL.COM">CARLOTACORDON4@GMAIL.COM</a></li>
+					</ul>
+				</div>
+				<div class="iniciales" aria-hidden="true">CC</div>
+			</section>
+			<!-- ===== FIN: PRESENTACIÓN ===== -->
+
+			<nav aria-label="Navegación principal">
+				<ul>
+					<li><a href="#sobre-mi">Sobre mí</a></li>
+					<li><a href="#formacion">Formación</a></li>
+					<li><a href="#experiencia">Experiencia</a></li>
+					<li><a href="#habilidades">Habilidades</a></li>
+					<li><a href="#idiomas">Idiomas</a></li>
+					<li><a href="#otros-datos">Otros datos</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main class="contenedor secciones">
+		<!-- ===== SECCIÓN: SOBRE MÍ ===== -->
+		<section class="tarjeta" id="sobre-mi" aria-labelledby="titulo-sobre-mi">
+			<h2 id="titulo-sobre-mi">Sobre mí</h2>
+			<p>Estudiante de cuarto curso del Grado en Trabajo Social en la Universidad de Cádiz, con especial interés en la intervención social y el trabajo directo con personas. Persona empática, responsable y comprometida, con habilidades comunicativas, capacidad de adaptación y experiencia en atención al público.</p>
+		</section>
+		<!-- ===== FIN: SOBRE MÍ ===== -->
+
+		<!-- ===== SECCIÓN: FORMACIÓN ===== -->
+		<section class="tarjeta" id="formacion" aria-labelledby="titulo-formacion">
+			<h2 id="titulo-formacion">Formación</h2>
+			<div class="item">
+				<h3>Grado en Trabajo Social</h3>
+				<p class="detalle">Universidad de Cádiz · Campus de Jerez de la Frontera</p>
+				<p>Actualmente cursando cuarto curso.</p>
+			</div>
+			<div class="item">
+				<h3>Bachillerato</h3>
+				<p class="detalle">IES Salmedina · Chipiona</p>
+			</div>
+		</section>
+		<!-- ===== FIN: FORMACIÓN ===== -->
+
+		<!-- ===== SECCIÓN: EXPERIENCIA LABORAL ===== -->
+		<section class="tarjeta" id="experiencia" aria-labelledby="titulo-experiencia">
+			<h2 id="titulo-experiencia">Experiencia laboral</h2>
+			<div class="item">
+				<h3>Casa Manolo Peña “El Chusco”</h3>
+				<p class="detalle">Chipiona, Cádiz · Desde 2021 hasta la actualidad</p>
+				<p>Atención al público, servicio de camarera, trabajo en cocina y plancha, gestión de comandas y trabajo en equipo.</p>
+			</div>
+		</section>
+		<!-- ===== FIN: EXPERIENCIA LABORAL ===== -->
+
+		<!-- ===== SECCIÓN: HABILIDADES ===== -->
+		<section class="tarjeta" id="habilidades" aria-labelledby="titulo-habilidades">
+			<h2 id="titulo-habilidades">Habilidades</h2>
+			<ul class="lista">
+				<li>Empatía y escucha activa</li>
+				<li>Comunicación y habilidades sociales</li>
+				<li>Trabajo en equipo</li>
+				<li>Responsabilidad y compromiso</li>
+				<li>Organización y resolución de problemas</li>
+				<li>Capacidad de adaptación</li>
+				<li>Microsoft Word y PowerPoint</li>
+				<li>Manejo de PDA y herramientas digitales</li>
+			</ul>
+		</section>
+		<!-- ===== FIN: HABILIDADES ===== -->
+
+		<!-- ===== SECCIÓN: IDIOMAS ===== -->
+		<section class="tarjeta" id="idiomas" aria-labelledby="titulo-idiomas">
+			<h2 id="titulo-idiomas">Idiomas</h2>
+			<p class="nota">Niveles de idiomas pendientes de confirmar.</p>
+		</section>
+		<!-- ===== FIN: IDIOMAS ===== -->
+
+		<!-- ===== SECCIÓN: OTROS DATOS ===== -->
+		<section class="tarjeta" id="otros-datos" aria-labelledby="titulo-otros-datos">
+			<h2 id="titulo-otros-datos">Otros datos</h2>
+			<ul class="lista">
+				<li>Permiso de conducir B y A1</li>
+				<li>Vehículo propio</li>
+				<li>Disponibilidad para desplazamientos</li>
+			</ul>
+		</section>
+		<!-- ===== FIN: OTROS DATOS ===== -->
+	</main>
+
+	<footer class="pie">
+		<div class="contenedor">Carlota Cordón Pérez · Chipiona, Cádiz</div>
+	</footer>
+</body>
+</html>
